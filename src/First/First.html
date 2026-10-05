@@ -1,0 +1,31 @@
+<h2>Student Information</h2>
+Roll No=<input type="text" [(ngModel)]="rno">
+<div>
+    <h1>Roll No={{rno}}</h1>
+    <h1>Name={{name}}</h1>
+    <h1>Marks No={{marks}}</h1>
+</div>
+<hr>
+<ul>
+    @for(d of data;track d)
+    {
+        <li>{{d}}</li>
+    }
+</ul>
+<hr>
+<table border="1">
+    
+        <thead>
+            <tr>
+            <th>Product Id</th>
+              <th>Product Name</th>
+              </tr>
+        </thead>
+   <tbody>
+   @for(p of products;track p)
+   {
+    <tr><td>{{p.ProductId}}</td>
+     <td>{{p.ProductName}}</td></tr>
+   }
+   </tbody>
+</table>
